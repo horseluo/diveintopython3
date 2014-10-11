@@ -55,6 +55,8 @@ pdfdir="$htmldir"
 mkdir -p "$pdfdir"
 pdffile="$pdfdir"/diveintopython3-r"$revision".pdf
 prince --style=prince.css --output="$pdffile" build/single.html 2>build/prince.log
+die "done"
+
 mkdir "$pdfdir"/examples
 cp examples/*.jpg examples/*.json examples/*.pickle examples/*.py examples/*.txt examples/*.xml "$pdfdir"/examples/
 cd build/ && \
